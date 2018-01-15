@@ -6,6 +6,8 @@ RUN   apk --no-cache upgrade && \
         cmake \
         libuv-dev \
         uuid-dev \
+        libuuid \
+        util-linux-dev \
         build-base && \
       cd xmrig-proxy && \
       mkdir build && \
@@ -13,6 +15,7 @@ RUN   apk --no-cache upgrade && \
       make && \
       apk del \
         build-base \
+        util-linux-dev \
         cmake
 USER proxy
 WORKDIR    /xmrig-proxy
