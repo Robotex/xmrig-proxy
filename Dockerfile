@@ -5,6 +5,7 @@ RUN   apk --no-cache upgrade && \
       apk --no-cache add \
         cmake \
         libuv-dev \
+        uuid-dev \
         build-base && \
       cd xmrig-proxy && \
       mkdir build && \
